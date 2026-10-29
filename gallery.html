@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery &amp; Venue Archive — SHRRIYA HOTEL &amp; BANQUET</title>
+  <meta name="description" content="Explore real, verified photographs of SHRRIYA HOTEL & BANQUET in Bardhaman. High-definition banquet hall interiors, wedding stage decors, dining arenas, and storefront.">
+  
+  <!-- Complete Favicon Suite -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="shortcut icon" href="assets/images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+
+  <!-- Design System CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .gallery-filter-wrap {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .gallery-filter-btn {
+      padding: 8px 18px;
+      border-radius: 100px;
+      border: 1px solid var(--border-color);
+      background: var(--surface);
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .gallery-filter-btn.active, .gallery-filter-btn:hover {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+    .gallery-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .gallery-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent-gold);
+    }
+    .gallery-card-img-wrap {
+      position: relative;
+      width: 100%;
+      height: 260px;
+      overflow: hidden;
+      background: #e2e8f0;
+    }
+    .gallery-card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .gallery-card:hover .gallery-card-img-wrap img {
+      transform: scale(1.05);
+    }
+    .gallery-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(8px);
+      color: #ffffff;
+      padding: 4px 10px;
+      border-radius: 100px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .gallery-badge.google-verified {
+      background: rgba(15, 118, 110, 0.9);
+      border-color: #2dd4bf;
+    }
+    .gallery-info {
+      padding: 1.25rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .gallery-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 0.35rem;
+    }
+    .gallery-meta {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TheDivine Floating Pill Navbar -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="header-brand" aria-label="SHRRIYA HOTEL & BANQUET Home">
+        <div class="brand-emblem-wrap">
+          <img src="assets/images/logo.svg" alt="SHRRIYA Emblem" class="brand-emblem">
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">SHRRIYA</span>
+          <span class="brand-sub">HOTEL &amp; BANQUET • BARDHAMAN</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="offerings.html" class="nav-link">Offerings</a></li>
+        <li class="nav-item"><a href="catering.html" class="nav-link">Catering</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link active">Gallery</a></li>
+        <li class="nav-item"><a href="reviews.html" class="nav-link">Reviews</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <a href="contact.html" class="btn-cta-pill">ENQUIRE NOW ↗</a>
+        <div class="social-circle-icons">
+          <a href="https://www.facebook.com/61556567624550" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/reel/DeOyIjYOL1H/" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="#E4405F"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://wa.me/917407392497" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 6.46 17.5 2 12.04 2Z" fill="#25D366"/><path d="M17.52 14.33C17.22 14.18 15.75 13.45 15.48 13.35C15.21 13.25 15.01 13.2 14.81 13.5C14.61 13.8 14.04 14.47 13.86 14.67C13.69 14.87 13.51 14.9 13.21 14.75C12.91 14.6 11.95 14.28 10.82 13.27C9.94 12.49 9.34 11.52 9.17 11.22C9 10.92 9.15 10.76 9.3 10.61C9.44 10.48 9.61 10.25 9.76 10.08C9.91 9.91 9.96 9.78 10.06 9.58C10.16 9.38 10.11 9.21 10.03 9.06C9.96 8.91 9.36 7.43 9.11 6.83C8.87 6.25 8.62 6.33 8.44 6.32C8.27 6.31 8.07 6.31 7.87 6.31C7.67 6.31 7.35 6.38 7.07 6.68C6.8 6.98 6.03 7.7 6.03 9.17C6.03 10.64 7.1 12.06 7.25 12.26C7.4 12.46 9.35 15.47 12.34 16.76C13.05 17.07 13.61 17.26 14.05 17.4C14.77 17.63 15.42 17.6 15.94 17.52C16.52 17.43 17.72 16.79 17.97 16.09C18.22 15.39 18.22 14.8 18.14 14.67C18.07 14.55 17.82 14.48 17.52 14.33Z" fill="#FFFFFF"/></svg>
+          </a>
+        </div>
+        <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Subpage Banner -->
+  <section class="subpage-banner">
+    <div class="abstract-orb-container">
+      <div class="abstract-orb abstract-orb-1"></div>
+      <div class="abstract-orb abstract-orb-2"></div>
+    </div>
+    <div class="abstract-tech-grid"></div>
+
+    <div style="position: relative; z-index: 2; max-width: 860px; margin: 0 auto;">
+      <span class="section-tag" style="color: #FFE29F;">AUTHENTIC VISUAL ARCHIVE</span>
+      <h1>Real Moments of Splendor &amp; <span class="title-accent">Celebration</span></h1>
+      <p>Browse 100% genuine photographs capturing our landmark architecture, grand banquet halls, wedding stages, and hospitality spaces in Ulhas, Bardhaman.</p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-tag">VERIFIED ARCHIVES</span>
+      <h2 class="section-title">Explore Our Halls &amp; Amenities</h2>
+      <p class="section-desc">Every photograph below is captured directly from our premises and official video archives at Alisha Bus Stand.</p>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="grid-3" style="gap: 1.5rem;">
+      
+      <!-- Photo 1: Storefront -->
+      <div class="gallery-card">
+        <div class="gallery-card-img-wrap">
+          <img src="assets/images/heritage-storefront.jpg" alt="SHRRIYA HOTEL & BANQUET Verified Google Maps Storefront" loading="lazy">
+          <span class="gallery-badge google-verified">Verified Google Maps</span>
+        </div>
+        <div class="gallery-info">
+          <div>
+            <h3 class="gallery-title">Prime Arterial Frontage</h3>
+            <p class="gallery-meta">Alisha Bus Stand, Ulhas, Bardhaman</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 2: Grand Ballroom -->
+      <div class="gallery-card">
+        <div class="gallery-card-img-wrap">
+          <img src="assets/images/banquet-grand-hall.jpg" alt="Grand Ballroom & Royal Banquet Hall Interior" loading="lazy">
+          <span class="gallery-badge">Ceremony Archive</span>
+        </div>
+        <div class="gallery-info">
+          <div>
+            <h3 class="gallery-title">Grand Ceremonial Ballroom</h3>
+            <p class="gallery-meta">Capacity: Up to 800 Guests • Climate Controlled</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 3: Wedding Mandap Stage -->
+      <div class="gallery-card">
+        <div class="gallery-card-img-wrap">
+          <img src="assets/images/banquet-stage-mandap.jpg" alt="Imperial Floral Wedding Stage & Mandap Artistry" loading="lazy">
+          <span class="gallery-badge">Ceremony Archive</span>
+        </div>
+        <div class="gallery-info">
+          <div>
+            <h3 class="gallery-title">Imperial Wedding Mandap</h3>
+            <p class="gallery-meta">Bespoke Floral Decor &amp; High-Riser Stage</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 4: Celebration Dining Arena -->
+      <div class="gallery-card">
+        <div class="gallery-card-img-wrap">
+          <img src="assets/images/banquet-celebration-dining.jpg" alt="Air-Conditioned Banquet Dining & Celebration Arena" loading="lazy">
+          <span class="gallery-badge">Ceremony Archive</span>
+        </div>
+        <div class="gallery-info">
+          <div>
+            <h3 class="gallery-title">Air-Conditioned Dining Arena</h3>
+            <p class="gallery-meta">Multi-Row Seating &amp; Buffet Flow Design</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 5: Illuminated Entrance -->
+      <div class="gallery-card">
+        <div class="gallery-card-img-wrap">
+          <img src="assets/images/banquet-lighting-entrance.jpg" alt="Illuminated Grand Entrance & Welcome Portico" loading="lazy">
+          <span class="gallery-badge">Ceremony Archive</span>
+        </div>
+        <div class="gallery-info">
+          <div>
+            <h3 class="gallery-title">Grand Illuminated Entrance</h3>
+            <p class="gallery-meta">Red Carpet Arrival &amp; Chandelier Lighting</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 6: Hall Architecture Overview -->
+      <div class="gallery-card">
+        <div class="gallery-card-img-wrap">
+          <img src="assets/images/feature-hall-overview.jpg" alt="High-Ceiling Banquet Architecture & Chandeliers" loading="lazy">
+          <span class="gallery-badge">Cinematic Showcase</span>
+        </div>
+        <div class="gallery-info">
+          <div>
+            <h3 class="gallery-title">High-Ceiling Hall Architecture</h3>
+            <p class="gallery-meta">Pillarless Sightlines &amp; Acoustic Engineering</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 7: Stage Decor & Artistry -->
+      <div class="gallery-card">
+        <div class="gallery-card-img-wrap">
+          <img src="assets/images/feature-stage-decor.jpg" alt="Lavish Reception Stage & Floral Artistry" loading="lazy">
+          <span class="gallery-badge">Cinematic Showcase</span>
+        </div>
+        <div class="gallery-info">
+          <div>
+            <h3 class="gallery-title">Lavish Reception Stage</h3>
+            <p class="gallery-meta">Couture Drapery &amp; Warm Spotlighting</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 8: Architectural Ceiling Lighting -->
+      <div class="gallery-card">
+        <div class="gallery-card-img-wrap">
+          <img src="assets/images/feature-ceiling-lighting.jpg" alt="Architectural Ambient Lighting & Crystal Fixtures" loading="lazy">
+          <span class="gallery-badge">Cinematic Showcase</span>
+        </div>
+        <div class="gallery-info">
+          <div>
+            <h3 class="gallery-title">Ambient Crystal Lighting</h3>
+            <p class="gallery-meta">Dimmer-Controlled Mood &amp; Photo-Ready Luminance</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 9: VIP Guest Seating Arena -->
+      <div class="gallery-card">
+        <div class="gallery-card-img-wrap">
+          <img src="assets/images/feature-vip-seating.jpg" alt="VIP Lounge & Guest Hospitality Arena" loading="lazy">
+          <span class="gallery-badge">Cinematic Showcase</span>
+        </div>
+        <div class="gallery-info">
+          <div>
+            <h3 class="gallery-title">VIP Seating Arena</h3>
+            <p class="gallery-meta">Plush Velvet Sofas &amp; Dignitary Hospitality</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 10: Hotel Suite Corridor -->
+      <div class="gallery-card">
+        <div class="gallery-card-img-wrap">
+          <img src="assets/images/feature-corridor-suites.jpg" alt="Guest Accommodation Corridor & AC Suites" loading="lazy">
+          <span class="gallery-badge">Hotel Accommodation</span>
+        </div>
+        <div class="gallery-info">
+          <div>
+            <h3 class="gallery-title">Guest Accommodation Suites</h3>
+            <p class="gallery-meta">Deluxe Outstation Stay • 24/7 Room Service</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 11: Dining Spread Layout -->
+      <div class="gallery-card">
+        <div class="gallery-card-img-wrap">
+          <img src="assets/images/feature-dining-spread.jpg" alt="Buffet & Dining Hall Layout" loading="lazy">
+          <span class="gallery-badge">Catering Facility</span>
+        </div>
+        <div class="gallery-info">
+          <div>
+            <h3 class="gallery-title">Executive Dining Hallway</h3>
+            <p class="gallery-meta">Dual-Line Food Service &amp; Beverage Stations</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo 12: Welcome Concierge Desk -->
+      <div class="gallery-card">
+        <div class="gallery-card-img-wrap">
+          <img src="assets/images/feature-welcome-counter.jpg" alt="Reception & Concierge Desk" loading="lazy">
+          <span class="gallery-badge">Hospitality Desk</span>
+        </div>
+        <div class="gallery-info">
+          <div>
+            <h3 class="gallery-title">Reception &amp; Concierge Desk</h3>
+            <p class="gallery-meta">24-Hour Event Helpdesk &amp; Key Handover</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Booking CTA Banner -->
+    <div style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #ffffff; border-radius: var(--radius-lg); padding: 3rem 2rem; margin-top: 4rem; text-align: center; position: relative; overflow: hidden; box-shadow: var(--shadow-lg);">
+      <div class="abstract-tech-grid" style="opacity: 0.15;"></div>
+      <div style="position: relative; z-index: 2; max-width: 720px; margin: 0 auto;">
+        <span class="section-tag" style="color: #FFE29F;">PLAN YOUR VISIT</span>
+        <h2 style="color: #ffffff; font-size: 2.2rem; margin-bottom: 1rem;">Experience the Grandeur in Person</h2>
+        <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.05rem; margin-bottom: 2rem;">
+          We invite families and event planners to tour our banquet halls, guest rooms, and dining arena. Schedule a guided walkthrough with our venue manager today.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="https://wa.me/917407392497?text=Hello%20Shrriya%20Hotel%2C%20I%20would%20like%20to%20schedule%20a%20hall%20walkthrough%20visit." target="_blank" rel="noopener noreferrer" class="btn-hero-primary" style="background: #25D366; color: #ffffff; border-color: #25D366;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 6.46 17.5 2 12.04 2Z" fill="#FFFFFF"/><path d="M17.52 14.33C17.22 14.18 15.75 13.45 15.48 13.35C15.21 13.25 15.01 13.2 14.81 13.5C14.61 13.8 14.04 14.47 13.86 14.67C13.69 14.87 13.51 14.9 13.21 14.75C12.91 14.6 11.95 14.28 10.82 13.27C9.94 12.49 9.34 11.52 9.17 11.22C9 10.92 9.15 10.76 9.3 10.61C9.44 10.48 9.61 10.25 9.76 10.08C9.91 9.91 9.96 9.78 10.06 9.58C10.16 9.38 10.11 9.21 10.03 9.06C9.96 8.91 9.36 7.43 9.11 6.83C8.87 6.25 8.62 6.33 8.44 6.32C8.27 6.31 8.07 6.31 7.87 6.31C7.67 6.31 7.35 6.38 7.07 6.68C6.8 6.98 6.03 7.7 6.03 9.17C6.03 10.64 7.1 12.06 7.25 12.26C7.4 12.46 9.35 15.47 12.34 16.76C13.05 17.07 13.61 17.26 14.05 17.4C14.77 17.63 15.42 17.6 15.94 17.52C16.52 17.43 17.72 16.79 17.97 16.09C18.22 15.39 18.22 14.8 18.14 14.67C18.07 14.55 17.82 14.48 17.52 14.33Z" fill="#25D366"/></svg>
+            BOOK A VENUE TOUR VIA WHATSAPP
+          </a>
+          <a href="tel:+917407392497" class="btn-hero-secondary" style="border-color: rgba(255, 255, 255, 0.4); color: #ffffff;">
+            CALL DIRECT: +91 74073 92497
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <div class="brand-emblem-wrap" style="width: 44px; height: 44px;">
+            <img src="assets/images/logo.svg" alt="SHRRIYA Emblem" class="brand-emblem">
+          </div>
+          <div class="brand-text">
+            <span class="brand-title" style="color: #ffffff; font-size: 1.25rem;">SHRRIYA</span>
+            <span class="brand-sub" style="color: var(--accent-gold); font-size: 0.65rem;">HOTEL &amp; BANQUET • BARDHAMAN</span>
+          </div>
+        </div>
+        <p class="footer-text">
+          Premier luxury wedding banquet hall and executive guest hotel located at Alisha Bus Stand, Ulhas, Bardhaman. Delivering unforgettable royal memories for lifetime celebrations.
+        </p>
+        <div class="footer-social-row">
+          <a href="https://www.facebook.com/61556567624550" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/reel/DeOyIjYOL1H/" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="#E4405F"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://wa.me/917407392497" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 6.46 17.5 2 12.04 2Z" fill="#25D366"/><path d="M17.52 14.33C17.22 14.18 15.75 13.45 15.48 13.35C15.21 13.25 15.01 13.2 14.81 13.5C14.61 13.8 14.04 14.47 13.86 14.67C13.69 14.87 13.51 14.9 13.21 14.75C12.91 14.6 11.95 14.28 10.82 13.27C9.94 12.49 9.34 11.52 9.17 11.22C9 10.92 9.15 10.76 9.3 10.61C9.44 10.48 9.61 10.25 9.76 10.08C9.91 9.91 9.96 9.78 10.06 9.58C10.16 9.38 10.11 9.21 10.03 9.06C9.96 8.91 9.36 7.43 9.11 6.83C8.87 6.25 8.62 6.33 8.44 6.32C8.27 6.31 8.07 6.31 7.87 6.31C7.67 6.31 7.35 6.38 7.07 6.68C6.8 6.98 6.03 7.7 6.03 9.17C6.03 10.64 7.1 12.06 7.25 12.26C7.4 12.46 9.35 15.47 12.34 16.76C13.05 17.07 13.61 17.26 14.05 17.4C14.77 17.63 15.42 17.6 15.94 17.52C16.52 17.43 17.72 16.79 17.97 16.09C18.22 15.39 18.22 14.8 18.14 14.67C18.07 14.55 17.82 14.48 17.52 14.33Z" fill="#FFFFFF"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About &amp; Story</a></li>
+          <li><a href="offerings.html">Venue Offerings</a></li>
+          <li><a href="catering.html">Catering Feasts</a></li>
+          <li><a href="gallery.html">Photo Archive</a></li>
+          <li><a href="reviews.html">Patron Reviews</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Event Offerings</h5>
+        <ul class="footer-links">
+          <li><a href="offerings.html">Wedding Ceremonies</a></li>
+          <li><a href="offerings.html">Reception Dinners</a></li>
+          <li><a href="offerings.html">Floral Mandap Artistry</a></li>
+          <li><a href="offerings.html">AC Bridal Suites</a></li>
+          <li><a href="catering.html">Royal Bengali Feasts</a></li>
+          <li><a href="offerings.html">Corporate Galas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Visiting Counter</h5>
+        <div class="footer-contact-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFE29F" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Alisha Bus Stand, Ulhas, Bardhaman, West Bengal 713103 (Plus Code: 6VCV+483)</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 6.46 17.5 2 12.04 2Z" fill="#25D366"/><path d="M17.52 14.33C17.22 14.18 15.75 13.45 15.48 13.35C15.21 13.25 15.01 13.2 14.81 13.5C14.61 13.8 14.04 14.47 13.86 14.67C13.69 14.87 13.51 14.9 13.21 14.75C12.91 14.6 11.95 14.28 10.82 13.27C9.94 12.49 9.34 11.52 9.17 11.22C9 10.92 9.15 10.76 9.3 10.61C9.44 10.48 9.61 10.25 9.76 10.08C9.91 9.91 9.96 9.78 10.06 9.58C10.16 9.38 10.11 9.21 10.03 9.06C9.96 8.91 9.36 7.43 9.11 6.83C8.87 6.25 8.62 6.33 8.44 6.32C8.27 6.31 8.07 6.31 7.87 6.31C7.67 6.31 7.35 6.38 7.07 6.68C6.8 6.98 6.03 7.7 6.03 9.17C6.03 10.64 7.1 12.06 7.25 12.26C7.4 12.46 9.35 15.47 12.34 16.76C13.05 17.07 13.61 17.26 14.05 17.4C14.77 17.63 15.42 17.6 15.94 17.52C16.52 17.43 17.72 16.79 17.97 16.09C18.22 15.39 18.22 14.8 18.14 14.67C18.07 14.55 17.82 14.48 17.52 14.33Z" fill="#FFFFFF"/></svg>
+          <a href="tel:+917407392497" style="color: #ffffff; font-weight: 700;">+91 74073 92497</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 6.46 17.5 2 12.04 2Z" fill="#25D366"/><path d="M17.52 14.33C17.22 14.18 15.75 13.45 15.48 13.35C15.21 13.25 15.01 13.2 14.81 13.5C14.61 13.8 14.04 14.47 13.86 14.67C13.69 14.87 13.51 14.9 13.21 14.75C12.91 14.6 11.95 14.28 10.82 13.27C9.94 12.49 9.34 11.52 9.17 11.22C9 10.92 9.15 10.76 9.3 10.61C9.44 10.48 9.61 10.25 9.76 10.08C9.91 9.91 9.96 9.78 10.06 9.58C10.16 9.38 10.11 9.21 10.03 9.06C9.96 8.91 9.36 7.43 9.11 6.83C8.87 6.25 8.62 6.33 8.44 6.32C8.27 6.31 8.07 6.31 7.87 6.31C7.67 6.31 7.35 6.38 7.07 6.68C6.8 6.98 6.03 7.7 6.03 9.17C6.03 10.64 7.1 12.06 7.25 12.26C7.4 12.46 9.35 15.47 12.34 16.76C13.05 17.07 13.61 17.26 14.05 17.4C14.77 17.63 15.42 17.6 15.94 17.52C16.52 17.43 17.72 16.79 17.97 16.09C18.22 15.39 18.22 14.8 18.14 14.67C18.07 14.55 17.82 14.48 17.52 14.33Z" fill="#FFFFFF"/></svg>
+          <a href="tel:+919093971355" style="color: #ffffff; font-weight: 700;">+91 90939 71355</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFE29F" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Open 24 Hours • 7 Days a Week</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 SHRRIYA HOTEL &amp; BANQUET. All rights reserved.</div>
+      <div>Designed &amp; Developed by <a href="https://cloudempire.tech/" target="_blank" rel="noopener noreferrer">Cloudempire</a></div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/917407392497?text=Hello%20Shrriya%20Hotel%20%26%20Banquet%2C%20I%20would%20like%20to%20inquire%20about%20event%20booking." target="_blank" rel="noopener noreferrer" class="floating-wa-btn" aria-label="Direct WhatsApp Inquiry">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 6.46 17.5 2 12.04 2Z" fill="#FFFFFF"/><path d="M17.52 14.33C17.22 14.18 15.75 13.45 15.48 13.35C15.21 13.25 15.01 13.2 14.81 13.5C14.61 13.8 14.04 14.47 13.86 14.67C13.69 14.87 13.51 14.9 13.21 14.75C12.91 14.6 11.95 14.28 10.82 13.27C9.94 12.49 9.34 11.52 9.17 11.22C9 10.92 9.15 10.76 9.3 10.61C9.44 10.48 9.61 10.25 9.76 10.08C9.91 9.91 9.96 9.78 10.06 9.58C10.16 9.38 10.11 9.21 10.03 9.06C9.96 8.91 9.36 7.43 9.11 6.83C8.87 6.25 8.62 6.33 8.44 6.32C8.27 6.31 8.07 6.31 7.87 6.31C7.67 6.31 7.35 6.38 7.07 6.68C6.8 6.98 6.03 7.7 6.03 9.17C6.03 10.64 7.1 12.06 7.25 12.26C7.4 12.46 9.35 15.47 12.34 16.76C13.05 17.07 13.61 17.26 14.05 17.4C14.77 17.63 15.42 17.6 15.94 17.52C16.52 17.43 17.72 16.79 17.97 16.09C18.22 15.39 18.22 14.8 18.14 14.67C18.07 14.55 17.82 14.48 17.52 14.33Z" fill="#25D366"/></svg>
+  </a>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

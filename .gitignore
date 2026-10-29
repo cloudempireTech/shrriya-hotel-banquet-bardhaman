@@ -1,0 +1,6 @@
+node_modules/
+*.log
+verify_images.js
+audit_and_capture.js
+run_gemini_shrriya_video.js
+git_push.js

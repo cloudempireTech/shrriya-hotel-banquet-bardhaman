@@ -1,0 +1,30 @@
+# SHRRIYA HOTEL & BANQUET - Brand Identity & Design System
+
+## 1. Brand Concept & Ethos
+- Brand Name: SHRRIYA HOTEL & BANQUET (শ্রীয়া হোটেল & ব্যাঙ্কোয়েট)
+- Category: Premier Hotel, Marriage Hall, Luxury Banquet & Celebration Destination
+- Locality: Alisha Bus Stand, Ulhas, Bardhaman, West Bengal 713103
+- Landmark: At Alisha Bus Stand Junction (near GT Road / NH19 corridor)
+- Phones & WhatsApp: +91 7407392497 / +91 9093971355
+- Google Maps Rating: 5.0 Stars (Verified Google Business Listing)
+- Operational Hours: Open 24 Hours, 7 Days a week
+
+## 2. Color Mood & Harmony (Strictly Clean, Modern & Bright - Zero Muddy Brown)
+- Pure Porcelain Canvas: #fcfbf9 (Breathable, radiant, pristine modern luxury foundation)
+- Crisp White Surface Cards: #ffffff (High-elevation cards with soft layered ambient drop-shadows)
+- Royal Emerald Teal Accent: #0f766e / #0d9488 (Sovereign luxury, freshness, auspicious grandeur)
+- Imperial Warm Gold Accent: #d4af37 / #c59b27 (Regal celebration, ceremonial warmth, premium brassware)
+- Frosted Glass Floating Navbar: rgba(255, 255, 255, 0.92) with border: 1px solid rgba(212, 175, 55, 0.22)
+- High-Contrast Midnight Slate Typography: #1a1512 / #0f172a (Sharp, effortless readability)
+
+## 3. Core Hospitality & Event Pillars
+1. Opulent Wedding & Reception Banquets: Central pillar-less grand celebration hall with state-of-the-art acoustic sound and festive mood lighting.
+2. Ceremonial Mandap & Floral Stage Artistry: Bespoke traditional and modern theme decors, floral pathways, and VIP reception seating.
+3. Luxury AC Suites & Guest Accommodation: Restful, plush air-conditioned rooms for bridal parties, outstation guests, and family retreats.
+4. Royal Multi-Cuisine Catering Feasts: Traditional Bengali celebratory feasts, Mughlai culinary delights, North Indian buffets, and live festive counters.
+5. Corporate Seminars & Social Galas: Anniversaries, birthday celebrations, thread ceremonies, and professional business conferences.
+
+## 4. 16:9 Hero Video Summary
+- Asset: assets/videos/hero.mp4
+- Poster: assets/images/hero-poster.jpg
+- Video Description: 16:9 cinematic landscape showcasing the grand celebratory ambiance of Shrriya Banquet Hall with luminous chandeliers, floral stage mandap, and warm festive hospitality in Bardhaman.
