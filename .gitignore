@@ -4,3 +4,6 @@ verify_images.js
 audit_and_capture.js
 run_gemini_shrriya_video.js
 git_push.js
+sync_wa_profile.js
+dispatch_wa_outreach.js
+wa_*.png
