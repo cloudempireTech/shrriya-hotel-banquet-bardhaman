@@ -24,29 +24,63 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2. Dynamic Keyword Rotator in Hero Title
-  const rotator = document.querySelector('.dynamic-rotator');
-  if (rotator) {
-    const keywords = [
+  // 2. Typewriter Dynamic Text Animation in Hero Title
+  const typewriterEl = document.querySelector('.dynamic-typewriter') || document.querySelector('.dynamic-rotator');
+  if (typewriterEl) {
+    const phrases = [
       "Bardhaman Weddings",
-      "Grand Receptions",
-      "Corporate Galas",
-      "Cultural Soirees",
-      "Milestone Celebrations"
+      "Royal Wedding Banquets",
+      "Sacred Biye & Mandap",
+      "Grand Reception Galas",
+      "Deluxe AC Guest Suites",
+      "Authentic Bengali Feasts"
     ];
-    let currentIndex = 0;
 
-    setInterval(() => {
-      rotator.style.opacity = '0';
-      rotator.style.transform = 'translateY(-10px)';
+    let phraseIndex = 0;
+    let charIndex = typewriterEl.textContent.trim().length || phrases[0].length;
+    let isDeleting = false;
 
-      setTimeout(() => {
-        currentIndex = (currentIndex + 1) % keywords.length;
-        rotator.textContent = keywords[currentIndex];
-        rotator.style.opacity = '1';
-        rotator.style.transform = 'translateY(0)';
-      }, 400);
-    }, 3200);
+    // Ensure cursor exists
+    let cursor = typewriterEl.nextElementSibling;
+    if (!cursor || !cursor.classList.contains('typewriter-cursor')) {
+      cursor = document.createElement('span');
+      cursor.className = 'typewriter-cursor';
+      cursor.textContent = '|';
+      typewriterEl.parentNode.insertBefore(cursor, typewriterEl.nextSibling);
+    }
+
+    function typeLoop() {
+      const currentPhrase = phrases[phraseIndex];
+
+      if (isDeleting) {
+        charIndex--;
+        typewriterEl.textContent = currentPhrase.substring(0, charIndex);
+      } else {
+        charIndex++;
+        typewriterEl.textContent = currentPhrase.substring(0, charIndex);
+      }
+
+      let delta = isDeleting ? 38 : 75;
+
+      if (!isDeleting && charIndex === currentPhrase.length) {
+        // Full phrase displayed, pause before deleting
+        delta = 2400;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        // Completely deleted, move to next phrase
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        delta = 450;
+      }
+
+      setTimeout(typeLoop, delta);
+    }
+
+    // Begin deletion of initial phrase after delay
+    setTimeout(() => {
+      isDeleting = true;
+      typeLoop();
+    }, 2000);
   }
 
   // 3. Hero Video Pause / Play Toggle

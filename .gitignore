@@ -6,4 +6,9 @@ run_gemini_shrriya_video.js
 git_push.js
 sync_wa_profile.js
 dispatch_wa_outreach.js
+send_wa_photos.js
+enable_pages_and_verify.js
+test_browser_gemini.js
+generate_video_browser_gemini.js
 wa_*.png
+gemini_*.png
